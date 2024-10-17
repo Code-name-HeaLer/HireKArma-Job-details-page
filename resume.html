@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleek Resume Template</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #eef1f6;
+        color: #333;
+        line-height: 1.6;
+        padding: 30px;
+      }
+
+      .resume-container {
+        max-width: 900px;
+        margin: auto;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 30px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #01bbe8;
+        padding-bottom: 20px;
+      }
+
+      .header .profile-info {
+        flex: 1;
+      }
+
+      .header h1 {
+        font-size: 2.8em;
+        color: #01bbe8;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 1em;
+        color: #555;
+      }
+
+      .header .social-icons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        color: #01bbe8;
+        font-size: 1.2em;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #007fa4;
+      }
+
+      .header .profile-pic {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #01bbe8;
+      }
+
+      .header .profile-pic img {
+        width: 100%;
+        height: auto;
+      }
+
+      .section-title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        color: black;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .info .item {
+        flex: 0 1 calc(33% - 10px);
+        margin-bottom: 20px;
+      }
+
+      .item-title {
+        font-weight: bold;
+        color: #555;
+        display: flex;
+        align-items: center;
+      }
+
+      .item-title i {
+        margin-right: 8px;
+        color: #01bbe8;
+      }
+
+      .skills-list,
+      .certifications-list,
+      .projects-list,
+      .interests-list,
+      .extra-info-list {
+        list-style: none;
+      }
+
+      .skills-list li,
+      .certifications-list li,
+      .projects-list li,
+      .interests-list li,
+      .extra-info-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .skills-list li i,
+      .certifications-list li i,
+      .projects-list li i,
+      .interests-list li i,
+      .extra-info-list li i {
+        margin-right: 8px;
+        color: #01bbe8;
+      }
+
+      .social-links {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-links a {
+        color: #01bbe8;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+
+      .social-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 0.9em;
+        color: #777;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .header .profile-info,
+        .header .profile-pic {
+          margin-bottom: 15px;
+        }
+
+        .info .item {
+          flex: 0 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container">
+      <!-- Header -->
+      <div class="header">
+        <div class="profile-info">
+          <h1>Full Name</h1>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-globe"></i></a>
+          </div>
+          <p><i class="fas fa-envelope"></i> email@example.com</p>
+          <p><i class="fas fa-phone"></i> +1234567890</p>
+          <p>
+            <i class="fas fa-birthday-cake"></i> Date of Birth: January 1, 1990
+            | Gender: Male
+          </p>
+          <p>
+            <i class="fas fa-university"></i> Institution: XYZ University |
+            Degree: BTech | Branch: Electrical Engineering | Graduation Year:
+            2024
+          </p>
+        </div>
+        <div class="profile-pic">
+          <img src="h-logo.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+
+      <!-- Academic Information -->
+      <h2 class="section-title">Academic Information</h2>
+      <div class="info">
+        <div class="item">
+          <p class="item-title">
+            <i class="fas fa-chart-line"></i>10th Grade Percentage:
+          </p>
+          <p>90%</p>
+        </div>
+        <div class="item">
+          <p class="item-title">
+            <i class="fas fa-chart-line"></i>12th Grade Percentage:
+          </p>
+          <p>85%</p>
+        </div>
+        <div class="item">
+          <p class="item-title">
+            <i class="fas fa-graduation-cap"></i>BTech CGPA:
+          </p>
+          <p>8.5</p>
+        </div>
+      </div>
+
+      <!-- Skills and Expertise -->
+      <h2 class="section-title">Skills and Expertise</h2>
+      <div class="info">
+        <div class="item">
+          <p class="item-title"><i class="fas fa-code"></i>Technical Skills:</p>
+          <ul class="skills-list">
+            <li><i class="fas fa-check"></i>HTML, CSS, JavaScript</li>
+            <li><i class="fas fa-check"></i>React, Node.js</li>
+            <li><i class="fas fa-check"></i>Python, C++</li>
+          </ul>
+        </div>
+        <div class="item">
+          <p class="item-title">
+            <i class="fas fa-user-friends"></i>Soft Skills:
+          </p>
+          <ul class="skills-list">
+            <li><i class="fas fa-check"></i>Leadership</li>
+            <li><i class="fas fa-check"></i>Communication</li>
+            <li><i class="fas fa-check"></i>Teamwork</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Certifications (Optional) -->
+      <h2 class="section-title">Certifications</h2>
+      <ul class="certifications-list">
+        <li><i class="fas fa-award"></i>Certified Full-Stack Developer</li>
+        <li><i class="fas fa-award"></i>Machine Learning Certification</li>
+      </ul>
+
+      <!-- Internships and Projects (Optional) -->
+      <h2 class="section-title">Internships and Projects</h2>
+      <ul class="projects-list">
+        <li>
+          <i class="fas fa-briefcase"></i>Internship at ABC Corp, Software
+          Developer, 6 months
+        </li>
+        <li>
+          <i class="fas fa-project-diagram"></i>Project: AI-based Chatbot -
+          Developed a chatbot using Python and TensorFlow.
+        </li>
+      </ul>
+
+      <!-- Career Interests -->
+      <h2 class="section-title">Career Interests</h2>
+      <ul class="interests-list">
+        <li><i class="fas fa-industry"></i>Preferred Industry: IT</li>
+        <li>
+          <i class="fas fa-briefcase"></i>Job Roles of Interest: Software
+          Developer, Data Scientist
+        </li>
+      </ul>
+
+      <!-- Extra Info -->
+      <h2 class="section-title">Extra Information</h2>
+      <ul class="extra-info-list">
+        <li><i class="fas fa-globe"></i>Languages: English, Hindi</li>
+        <li><i class="fas fa-location-arrow"></i>Location: New Delhi, India</li>
+      </ul>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>© 2024 Full Name. All Rights Reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
