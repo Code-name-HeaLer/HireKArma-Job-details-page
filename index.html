@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Engineer - TechInnovate Inc.</title>
+    <style>
+      :root {
+        --primary-color: #3498db;
+        --secondary-color: #2c3e50;
+        --accent-color: #e74c3c;
+        --bg-color: #ecf0f1;
+        --text-color: #34495e;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 20px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .company-logo {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+      }
+
+      .job-title-section {
+        text-align: left;
+      }
+
+      .job-title {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .company-name {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .apply-btn {
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .apply-btn:hover {
+        background-color: #c0392b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .job-overview {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        gap: 20px;
+      }
+
+      .overview-item {
+        flex: 1 1 200px;
+        text-align: center;
+      }
+
+      .overview-item i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .overview-label {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .overview-value {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      main .job-details {
+        margin-top: 40px;
+      }
+
+      .detail-section {
+        padding: 30px 0;
+      }
+
+      .detail-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .detail-section h2 i {
+        margin-right: 10px;
+        font-size: 1.8rem;
+      }
+
+      .detail-section ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      .detail-section ul li {
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+      .detail-section ul li::before {
+        content: "\2022";
+        color: var(--accent-color);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .skill-tag {
+        background-color: rgb(40, 11, 225);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .skill-tag:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-2px);
+      }
+
+      .timeline {
+        position: relative;
+        padding-left: 30px;
+        margin-top: 20px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background-color: #304b09;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .timeline-item::before {
+        background-color: black;
+        content: "";
+        position: absolute;
+        left: -34px;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+      }
+
+      .timeline-date {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: var(--accent-color);
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid #ccc;
+        margin: 30px 0;
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .job-title-section {
+          text-align: center;
+          margin: 20px 0;
+        }
+
+        .job-title {
+          font-size: 2rem;
+        }
+
+        .overview-item {
+          flex-basis: calc(50% - 10px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .overview-item {
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <img
+            src="h-logo.jpg"
+            alt="TechInnovate Inc. Logo"
+            class="company-logo"
+          />
+          <div class="job-title-section">
+            <h1 class="job-title">Software Engineer</h1>
+            <p class="company-name">TechInnovate Inc.</p>
+          </div>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+        <div class="job-overview">
+          <div class="overview-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p class="overview-label">Location</p>
+            <p class="overview-value">Bengaluru, Karnataka</p>
+          </div>
+          <div class="overview-item">
+            <i class="fas fa-money-bill-wave"></i>
+            <p class="overview-label">Salary</p>
+            <p class="overview-value">₹50,000/month</p>
+          </div>
+          <div class="overview-item">
+            <i class="fas fa-briefcase"></i>
+            <p class="overview-label">Experience</p>
+            <p class="overview-value">0-2 years</p>
+          </div>
+          <div class="overview-item">
+            <i class="fas fa-clock"></i>
+            <p class="overview-label">Posted</p>
+            <p class="overview-value">5 days ago</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="job-details">
+        <div class="detail-section">
+          <h2><i class="fas fa-info-circle"></i> Job Description</h2>
+          <p>
+            We are seeking a talented Software Engineer to join our dynamic team
+            at TechInnovate Inc. As a key member of our development team, you
+            will be responsible for designing, developing, and maintaining
+            cutting-edge software applications. This role offers an exciting
+            opportunity to work on innovative projects and contribute to the
+            growth of our company.
+          </p>
+        </div>
+        <hr />
+        <div class="detail-section">
+          <h2><i class="fas fa-tasks"></i> Key Responsibilities</h2>
+          <ul>
+            <li>Design and implement robust, scalable, and efficient code</li>
+            <li>
+              Collaborate with cross-functional teams to define and develop new
+              features
+            </li>
+            <li>
+              Participate in code reviews and contribute to engineering best
+              practices
+            </li>
+            <li>Troubleshoot, debug, and upgrade existing systems</li>
+            <li>
+              Stay up-to-date with emerging technologies and industry trends
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="detail-section">
+          <h2><i class="fas fa-laptop-code"></i> Required Skills</h2>
+          <p>
+            We are looking for a candidate with a strong foundation in software
+            development, particularly in the following technologies:
+          </p>
+          <div class="skills-container">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Agile</span>
+          </div>
+        </div>
+        <hr />
+        <div class="detail-section">
+          <h2><i class="fas fa-graduation-cap"></i> Qualifications</h2>
+          <ul>
+            <li>
+              Bachelor’s degree in Computer Science, Engineering, or a related
+              field
+            </li>
+            <li>0-2 years of professional software development experience</li>
+            <li>Strong problem-solving skills and attention to detail</li>
+            <li>Excellent communication and teamwork abilities</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="detail-section">
+          <h2><i class="fas fa-calendar-alt"></i> Important Dates</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <p class="timeline-date">Application Deadline:</p>
+              <p>October 31, 2024</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-date">Interview Period:</p>
+              <p>November 10 - November 20, 2024</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-date">Start Date:</p>
+              <p>December 1, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
