@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <title>Software Engineer - TechInnovate Inc.</title>
     <style>
       :root {
@@ -119,6 +123,23 @@
         font-weight: bold;
       }
 
+      /* Tag Card Styling */
+      .tag-cards {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .tag-card {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        text-align: center;
+        min-width: 120px;
+      }
+
       main .job-details {
         margin-top: 40px;
       }
@@ -224,10 +245,19 @@
         margin: 30px 0;
       }
 
+      .bold {
+        font-weight: bold;
+      }
+
       @media (max-width: 768px) {
         .header-content {
           flex-direction: column;
           text-align: center;
+        }
+
+        .tag-cards {
+          flex-direction: column;
+          align-items: center;
         }
 
         .job-title-section {
@@ -274,8 +304,8 @@
           </div>
           <div class="overview-item">
             <i class="fas fa-money-bill-wave"></i>
-            <p class="overview-label">Salary</p>
-            <p class="overview-value">₹50,000/month</p>
+            <p class="overview-label">CTC While Probation</p>
+            <p class="overview-value">₹30,000/month</p>
           </div>
           <div class="overview-item">
             <i class="fas fa-briefcase"></i>
@@ -292,9 +322,21 @@
     </header>
 
     <main class="container">
+      <div class="container">
+        <div class="tag-cards">
+          <div class="tag-card">
+            Number of Openings: <span class="bold">100</span>
+          </div>
+          <div class="tag-card">Industry: <span class="bold">IT</span></div>
+        </div>
+      </div>
+
       <div class="job-details">
         <div class="detail-section">
-          <h2><i class="fas fa-info-circle"></i> Job Description</h2>
+          <h2>
+            <i class="fas fa-info-circle" style="color: #01bbe8"></i>
+            Job Description
+          </h2>
           <p>
             We are seeking a talented Software Engineer to join our dynamic team
             at TechInnovate Inc. As a key member of our development team, you
@@ -306,7 +348,10 @@
         </div>
         <hr />
         <div class="detail-section">
-          <h2><i class="fas fa-tasks"></i> Key Responsibilities</h2>
+          <h2>
+            <i class="fas fa-tasks" style="color: #01bbe8"></i> Key
+            Responsibilities
+          </h2>
           <ul>
             <li>Design and implement robust, scalable, and efficient code</li>
             <li>
@@ -325,7 +370,10 @@
         </div>
         <hr />
         <div class="detail-section">
-          <h2><i class="fas fa-laptop-code"></i> Required Skills</h2>
+          <h2>
+            <i class="fas fa-laptop-code" style="color: #01bbe8"></i> Required
+            Skills
+          </h2>
           <p>
             We are looking for a candidate with a strong foundation in software
             development, particularly in the following technologies:
@@ -342,7 +390,10 @@
         </div>
         <hr />
         <div class="detail-section">
-          <h2><i class="fas fa-graduation-cap"></i> Qualifications</h2>
+          <h2>
+            <i class="fas fa-graduation-cap" style="color: #01bbe8"></i>
+            Qualifications
+          </h2>
           <ul>
             <li>
               Bachelor’s degree in Computer Science, Engineering, or a related
@@ -355,11 +406,18 @@
         </div>
         <hr />
         <div class="detail-section">
-          <h2><i class="fas fa-calendar-alt"></i> Important Dates</h2>
+          <h2>
+            <i class="fas fa-calendar-alt" style="color: #01bbe8"></i> Important
+            Dates
+          </h2>
           <div class="timeline">
             <div class="timeline-item">
               <p class="timeline-date">Application Deadline:</p>
               <p>October 31, 2024</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-date">Probable Campus Drive Date:</p>
+              <p>November 5, 2024</p>
             </div>
             <div class="timeline-item">
               <p class="timeline-date">Interview Period:</p>
@@ -370,6 +428,49 @@
               <p>December 1, 2024</p>
             </div>
           </div>
+        </div>
+        <hr />
+        <div class="detail-section">
+          <h2>
+            <i class="fas fa-file-alt" style="color: #01bbe8"></i> Service
+            Agreement
+          </h2>
+          <p>Minimum service period: 1 year; Bond detail: 6 months.</p>
+        </div>
+        <hr />
+        <div class="detail-section">
+          <h2>
+            <i class="fas fa-money-bill-wave" style="color: #01bbe8"></i> CTC
+            Details
+          </h2>
+          <ul>
+            <li>CTC While Probation: ₹30,000/month</li>
+            <li>CTC After Probation: ₹50,000/month</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="detail-section">
+          <h2>
+            <i class="fas fa-user-graduate" style="color: #01bbe8"></i>
+            Eligibility Criteria
+          </h2>
+          <ul>
+            <li>B.Tech in Computer Science or related field</li>
+            <li>0-2 years of experience in software development</li>
+            <li>Proficiency in Java</li>
+            <li>Strong problem-solving skills</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="detail-section">
+          <h2>
+            <i class="fas fa-graduation-cap" style="color: #01bbe8"></i>
+            Academic Details
+          </h2>
+          <ul>
+            <li>Degree: B.Tech</li>
+            <li>Branch: Computer Science</li>
+          </ul>
         </div>
       </div>
     </main>
